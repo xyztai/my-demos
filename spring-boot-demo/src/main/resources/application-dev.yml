@@ -10,7 +10,7 @@ logging:
 
 druid:
   driverClassName: com.mysql.cj.jdbc.Driver #com.mysql.jdbc.Driver
-  url: jdbc:mysql://192.168.56.101:3306/nacos_config?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+  url: jdbc:mysql://@mysql.ipport@/nacos_config?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
   username: root
   password: root
   type: com.alibaba.druid.pool.DruidDataSource
@@ -31,7 +31,7 @@ druid:
   useGlobalDataSourceStat: true
 
 c3p0::
-  jdbcUrl: jdbc:mysql://192.168.56.101:3306/nacos_config?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+  jdbcUrl: jdbc:mysql://@mysql.ipport@/nacos_config?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
   user: root
   password: root
   driverClass: com.mysql.cj.jdbc.Driver

@@ -50,6 +50,7 @@
         <c3p0.version>0.9.5.2</c3p0.version>
         <mysql-connector.version>8.0.25</mysql-connector.version>
         <druid.version>1.1.20</druid.version>
+        <mysql.ipport>192.168.56.101:3306</mysql.ipport>
     </properties>
 
     <dependencyManagement>
@@ -129,5 +130,13 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+
+        <!-- 实现yml从pom文件中读取参数 -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 </project>
