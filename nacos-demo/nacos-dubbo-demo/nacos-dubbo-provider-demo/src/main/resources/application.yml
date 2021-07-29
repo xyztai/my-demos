@@ -1,12 +1,12 @@
 server:
   port: 20001
   servlet:
-    context-path: /test
+    context-path: /dubbo-provider
 
 dubbo:
   application:
     name: dubbo-provider
   registry:
     #address: nacos://127.0.0.1:8848
-    address: nacos://nacos:8848
+    address: nacos://@nacos.ipport@
     #address: zookeeper://127.0.0.1:2181

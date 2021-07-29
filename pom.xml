@@ -52,6 +52,7 @@
         <mysql-connector.version>8.0.25</mysql-connector.version>
         <druid.version>1.1.20</druid.version>
         <mysql.ipport>192.168.56.101:3306</mysql.ipport>
+        <nacos.ipport>192.168.56.101:8848</nacos.ipport>
     </properties>
 
     <dependencyManagement>
