@@ -1,0 +1,16 @@
+server:
+  port: 10001
+  servlet:
+    context-path: /test
+nacos:
+  config:
+    server-addr: 127.0.0.1:8848
+    namespace: b82762c2-0c09-42ff-a422-3ceb68ff215f #prod
+    group: platform_group
+  discovery:
+    server-addr: 127.0.0.1:8848
+    namespace: b82762c2-0c09-42ff-a422-3ceb68ff215f #prod
+    auto-register: true #自动注册
+spring:
+  application:
+    name: nacos-spring-boot-demo
