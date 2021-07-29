@@ -1,0 +1,46 @@
+server:
+  port: 10086
+  servlet:
+    context-path: /spring-boot-demo
+
+logging:
+  level:
+    druid.sql: debug
+  config: classpath:logback-spring.xml
+
+druid:
+  driverClassName: com.mysql.cj.jdbc.Driver #com.mysql.jdbc.Driver
+  url: jdbc:mysql://192.168.56.101:3306/nacos_config?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+  username: root
+  password: root
+  type: com.alibaba.druid.pool.DruidDataSource
+  initialSize: 5
+  minIdle: 5
+  maxActive: 20
+  maxWait: 60000
+  timeBetweenEvictionRunsMillis: 60000
+  minEvictableIdleTimeMillis: 300000
+  validationQuery: SELECT 1 FROM DUAL
+  testWhileIdle: true
+  testOnBorrow: false
+  testOnReturn: false
+  poolPreparedStatements: true
+  maxPoolPreparedStatementPerConnectionSize: 20
+  filters: stat,wall,slf4j #log4j
+  connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  useGlobalDataSourceStat: true
+
+c3p0::
+  jdbcUrl: jdbc:mysql://192.168.56.101:3306/nacos_config?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+  user: root
+  password: root
+  driverClass: com.mysql.cj.jdbc.Driver
+  minPoolSize: 1
+  maxPoolSize: 10
+  maxIdleTime: 3000
+  initialPoolSize: 1
+
+
+
+
+

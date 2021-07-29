@@ -13,4 +13,14 @@ public class IndexController {
     public String index(){
         return "Welcome spring-boot-demo!";
     }
+
+    @GetMapping("/demo")
+    public String demo(){
+        return "demo";
+    }
+
+    @GetMapping("/error-1")
+    public String error() throws Exception {
+        throw new Exception("error occurs!");
+    }
 }
