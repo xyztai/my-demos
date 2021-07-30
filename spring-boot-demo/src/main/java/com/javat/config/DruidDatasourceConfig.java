@@ -16,6 +16,7 @@ import javax.sql.DataSource;
  * @create 2021-07-29 13:28
  */
 @Configuration
+@SuppressWarnings("unchecked")
 public class DruidDatasourceConfig {
 
     // 配置文件的参数自动赋值到dataSource里
