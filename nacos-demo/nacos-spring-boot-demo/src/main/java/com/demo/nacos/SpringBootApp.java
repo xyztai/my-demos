@@ -5,6 +5,7 @@ import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.alibaba.nacos.api.exception.NacosException;
 import com.alibaba.nacos.api.naming.NamingService;
 import com.alibaba.nacos.api.naming.pojo.Instance;
+import com.alibaba.nacos.spring.context.annotation.EnableNacos;
 import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
 import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySources;
 import com.alibaba.nacos.spring.context.annotation.discovery.EnableNacosDiscovery;
@@ -16,10 +17,13 @@ import java.util.List;
 
 @RestController
 @SpringBootApplication
-@NacosPropertySources(value = {
-        @NacosPropertySource(dataId = "z-a.yml", groupId = "platform_group", autoRefreshed = true),
-        @NacosPropertySource(dataId = "z-b.yml", groupId = "platform_group", autoRefreshed = true),
-})
+@EnableNacosDiscovery
+//@EnableNacosDiscovery
+//@NacosPropertySources(value = {
+//        @NacosPropertySource(dataId = "z-a.yml", groupId = "platform_group", autoRefreshed = true),
+//        @NacosPropertySource(dataId = "z-b.yml", groupId = "platform_group", autoRefreshed = true),
+//})
+//@NacosPropertySource(dataId = "z-a.yml", groupId = "platform_group", autoRefreshed = true)
 public class SpringBootApp {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootApp.class, args);
@@ -28,10 +32,10 @@ public class SpringBootApp {
     @NacosValue(value="${paras.isExists:false}", autoRefreshed = true)
     private boolean isExists;
 
-    @NacosValue(value="${paras.animal:tiger}", autoRefreshed = true)
+    @NacosValue(value="${paras.animal:ddddd}", autoRefreshed = true)
     private String animal;
 
-    @NacosInjected
+    //@NacosInjected
     private NamingService namingService;
 
     // http://127.0.0.1:18001/test/getConfig

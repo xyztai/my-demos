@@ -4,13 +4,22 @@ server:
     context-path: /test
 nacos:
   config:
-    server-addr: 127.0.0.1:8848
-    namespace: b82762c2-0c09-42ff-a422-3ceb68ff215f #prod
+    server-addr: 192.168.56.101:8848
+    namespace: 8f38ecfa-a727-4985-9d9a-c333d483ec25 #prod
     group: platform_group
+    data-id: z-a
+    type: yaml
+    auto-refresh: true
+    bootstrap:
+      enable: true
+    context-path: nacos-test
   discovery:
-    server-addr: 127.0.0.1:8848
-    namespace: b82762c2-0c09-42ff-a422-3ceb68ff215f #prod
+    server-addr: 192.168.56.101:8848
+    #namespace: 8f38ecfa-a727-4985-9d9a-c333d483ec25 #prod
     auto-register: true #自动注册
+    register:
+      service-name: nacos-reg
+#    group: DEFAULT_GROUP
 spring:
   application:
     name: nacos-spring-boot-demo
