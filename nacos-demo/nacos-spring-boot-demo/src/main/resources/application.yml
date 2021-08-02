@@ -1,0 +1,14 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 7017
+spring:
+  profiles:
+    active: dev
+  application:
+    name: nacos-spring-boot-demo
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
