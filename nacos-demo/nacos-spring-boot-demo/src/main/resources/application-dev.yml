@@ -10,7 +10,7 @@ nacos:
       enable: true
     context-path: nacos-test
   discovery:
-    server-addr: 192.168.56.102:8848
+    server-addr: 192.168.56.101:8848
     namespace: 8f38ecfa-a727-4985-9d9a-c333d483ec25 #prod
     auto-register: true #自动注册
     register:
