@@ -15,11 +15,12 @@ public class SpringCloudConfigApp {
         SpringApplication.run(SpringCloudConfigApp.class, args);
     }
 
-    @Value("${a.b:false}")
-    private boolean userLocalCache;
+    @Value("${params.animal:human}")
+    private String animal;
 
+    // http://127.0.0.1:11001/getConfig
     @GetMapping("/getConfig")
-    public boolean get(){
-        return userLocalCache;
+    public String get(){
+        return "SpringCloudConfigApp: [human] => " + animal;
     }
 }

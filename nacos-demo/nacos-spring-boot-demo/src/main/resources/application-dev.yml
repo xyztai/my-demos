@@ -1,19 +1,18 @@
 nacos:
   config:
-    server-addr: 192.168.56.101:8848
-    namespace: 8f38ecfa-a727-4985-9d9a-c333d483ec25 #prod
+    server-addr: @nacos.ipport@
+    namespace: @nacos.namespace@ #prod
     group: platform_group
-    data-id: z-a
+    data-ids: z-a
     type: yaml
     auto-refresh: true
     bootstrap:
       enable: true
-    context-path: nacos-test
   discovery:
-    server-addr: 192.168.56.101:8848
-    namespace: 8f38ecfa-a727-4985-9d9a-c333d483ec25 #prod
+    server-addr: @nacos.ipport@
+    namespace: @nacos.namespace@ #prod
     auto-register: true #自动注册
     register:
-      service-name: nacos-reg
+      service-name: nacos-reg #这里优先级高于spring.application.name
       group: platform
 #    group: DEFAULT_GROUP

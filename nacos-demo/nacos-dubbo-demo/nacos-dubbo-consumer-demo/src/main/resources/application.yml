@@ -1,7 +1,7 @@
 server:
   port: 10001
-  servlet:
-    context-path: /dubbo-consumer
+  #servlet:
+    #context-path: /dubbo-consumer
 
 dubbo:
   application:

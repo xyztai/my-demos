@@ -17,24 +17,19 @@ import java.util.List;
  */
 @RestController
 public class DemoController {
-
-    @NacosValue(value="${paras.isExists:false}", autoRefreshed = true)
-    private boolean isExists;
-
-    @NacosValue(value="${paras.animal:ddddd}", autoRefreshed = true)
+    @NacosValue(value="${params.animal:human}", autoRefreshed = true)
     private String animal;
 
     @NacosInjected
     private NamingService namingService;
 
-
-    // http://127.0.0.1:18001/test/getConfig
+    // http://127.0.0.1:18001/getConfig
     @GetMapping(value = "/getConfig")
     public String Hello(){
-        return "nacos-spring-boot-demo: " + isExists + " " + animal;
+        return "nacos-spring-boot-demo: [human] => " + animal;
     }
 
-    // http://127.0.0.1:18001/test/getInstance?serviceName=nacos-spring-boot-demo&groupName=DEFAULT_GROUP
+    // http://127.0.0.1:18001/getInstance?serviceName=nacos-reg&groupName=DEFAULT_GROUP
     @GetMapping(value = "/getInstance")
     public List<Instance> get(@RequestParam String serviceName, @RequestParam String groupName) throws NacosException {
         return namingService.getAllInstances(serviceName, groupName);

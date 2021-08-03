@@ -65,6 +65,7 @@
         <druid.version>1.1.20</druid.version>
         <mysql.ipport>192.168.56.101:3306</mysql.ipport>
         <nacos.ipport>192.168.56.101:8848</nacos.ipport>
+        <nacos.namespace>8f38ecfa-a727-4985-9d9a-c333d483ec25</nacos.namespace>
     </properties>
 
     <dependencyManagement>
@@ -122,6 +123,20 @@
     <build>
         <pluginManagement>
             <plugins>
+                <!--支持yaml读取pom的参数-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.2.0</version>
+                    <configuration>
+                        <encoding>UTF-8</encoding>
+                        <delimiters>
+                            <delimiter>@</delimiter>
+                        </delimiters>
+                        <useDefaultDelimiters>false</useDefaultDelimiters>
+                    </configuration>
+                </plugin>
+
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
@@ -145,7 +160,7 @@
             </plugins>
         </pluginManagement>
 
-        <!-- 实现yml从pom文件中读取参数 -->
+        <!--指定filtering=true.maven的占位符解析表达式就可以用于它里面的文件-->
         <resources>
             <resource>
                 <directory>src/main/resources</directory>

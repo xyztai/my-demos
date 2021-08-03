@@ -11,6 +11,7 @@ public class ConsumerController {
     @DubboReference
     private IHelloService helloService;
 
+    // http://127.0.0.1:10001/hello?str=CHINA
     @GetMapping("/hello")
     public String consumer(@RequestParam String str){
         return helloService.sayHello(str);
