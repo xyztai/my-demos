@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: @profiles.active@
+app:
+  build:
+    time: ${current.time}
