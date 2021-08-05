@@ -11,6 +11,15 @@
     <groupId>com.kafka.parent</groupId>
     <artifactId>ware19-kafka-parent</artifactId>
     <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <encoding>UTF-8</encoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+    </properties>
+
     <modules>
         <!-- 消息生产者 -->
         <module>kafka-producer-server</module>

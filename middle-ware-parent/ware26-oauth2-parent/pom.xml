@@ -12,7 +12,17 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.oauth2.parent</groupId>
     <artifactId>ware26-oauth2-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <encoding>UTF-8</encoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+    </properties>
+
 
     <modules>
         <module>auth-server</module>
