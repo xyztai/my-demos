@@ -13,6 +13,7 @@
         <module>nacos-demo</module>
         <module>jdk-demo</module>
         <module>middle-ware-parent</module>
+        <module>sentinel-demo</module>
     </modules>
 
     <!--
