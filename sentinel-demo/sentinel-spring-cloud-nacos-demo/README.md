@@ -1,5 +1,6 @@
 #### 1. 启动sentinel-dashboard：
 ###### java -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard-1.8.2.jar 
+###### sentinel-dashboard 访问端口URL：http://127.0.0.1:8080/
 #### 2. 在nacos上添加配置；
 ```json
 [
