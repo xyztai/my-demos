@@ -14,7 +14,7 @@
 
     <modules>
         <module>sentinel-spring-boot-demo</module>
-        <module>sentinel-spring-cloud-demo</module>
+        <module>sentinel-spring-cloud-nacos-demo</module>
     </modules>
 
     <!-- 使用 aliyun 库 -->
