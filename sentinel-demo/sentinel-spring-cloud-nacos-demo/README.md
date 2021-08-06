@@ -32,4 +32,14 @@
     }
 ]
 ```
-#### 3. 请求一下<font color=red>被Sentinel切入的</font>接口就能看到请求接口统计的情况，至此就可以使用sentinel的各种功能;
+#### 3. 请求一下<font color=red>被Sentinel限流</font>接口就能看到请求接口统计的情况，至此就可以使用sentinel的各种功能;
+#### 4. nacos配置文件说明
+|字段|说明|
+|--|--|
+|resource|资源名，即限流规则的作用对象|
+|limitApp|流控针对的调用来源，若为default则不区分调用来源|
+|grade|限流阈值类型（QPS或并发线程数）；0代表根据并发数量来限流，1代表根据QPS来进行限流控制|
+|count|限流阈值|
+|strategy|调用关系限流策略|
+|controlBehavior|流量控制效果（直接拒绝、Warm Up、匀速排队）|
+|clusterMode|是否为集群模式|
