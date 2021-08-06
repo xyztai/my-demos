@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @create 2021-08-06 14:40
  */
 @SpringBootApplication
-public class SentileApp {
+public class SentinelApp {
     public static void main(String[] args) {
-        SpringApplication.run(SentileApp.class, args);
+        SpringApplication.run(SentinelApp.class, args);
     }
 }
