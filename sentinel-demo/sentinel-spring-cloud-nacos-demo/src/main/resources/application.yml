@@ -1,12 +1,5 @@
-server:
-  port: 8401
 spring:
-  application:
-    name: sentinel-spring-cloud-nacos-demo
   cloud:
-    nacos:
-      discovery:
-        server-addr: 192.168.56.101:8848
     sentinel:
       transport:
         dashboard: 127.0.0.1:8080
@@ -15,8 +8,8 @@ spring:
         ds1:
           nacos:
             server-addr: 192.168.56.101:8848
-            dataId: sentinel-spring-cloud-nacos-demo
-            groupId: DEFAULT_GROUP
+            data-id: sentinel-spring-cloud-nacos-demo
+            group-id: DEFAULT_GROUP
             data-type: json
             rule-type: flow
 management:
