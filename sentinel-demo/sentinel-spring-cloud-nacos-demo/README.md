@@ -41,6 +41,6 @@
 |limitApp|流控针对的调用来源，若为default则不区分调用来源|
 |grade|限流阈值类型（QPS或并发线程数）；0代表根据并发数量来限流，1代表根据QPS来进行限流控制|
 |count|限流阈值|
-|strategy|调用关系限流策略|
-|controlBehavior|流量控制效果（直接拒绝、Warm Up、匀速排队）|
+|strategy|流控模式，0-直接，1-关联，2-链路|
+|controlBehavior|流量控制效果（0-快速失败，1-warm up，2-排队等待）|
 |clusterMode|是否为集群模式|
