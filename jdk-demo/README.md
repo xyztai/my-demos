@@ -1,1 +1,1 @@
-###### 1.JoinDemo 用来展示start调用在join之前，才会生效；
+###### 1.net.t.thread.JoinDemo 用来展示start调用在join之前，才会生效；

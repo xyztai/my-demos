@@ -1,5 +1,4 @@
-import lombok.AllArgsConstructor;
-import lombok.Data;
+package net.t.thread;
 
 /**
  * @Author tai

@@ -1,3 +1,5 @@
+package net.t.thread;
+
 /**
  * @Author tai
  * @create 2021-08-03 13:01
