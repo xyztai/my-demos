@@ -1,5 +1,6 @@
 package com.demo.sentinel.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.demo.sentinel.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,5 +32,11 @@ public class TestController {
     @GetMapping(value = "/hello/{name}")
     public String apiHello(@PathVariable String name) {
         return service.sayHello(name);
+    }
+
+    @GetMapping("hello")
+    @SentinelResource(value = "test.hello", fallback = "helloError")
+    public String hello(String name){
+        return "hello,"+name;
     }
 }

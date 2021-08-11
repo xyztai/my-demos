@@ -10,7 +10,9 @@ spring:
           nacos:
             server-addr: 192.168.56.101:8848
             namespace: uat
-            data-id: ${spring.application.name}-flow-rules
+            username: nacos
+            password: nacos
+            data-id: sentinel-spring-cloud-nacos-demo-flow-rules
             group-id: DEFAULT_GROUP
             data-type: json
             # 可以通过类 com.alibaba.cloud.sentinel.datasource.RuleType 查找到支持的 rule-type
@@ -19,7 +21,9 @@ spring:
           nacos:
             server-addr: 192.168.56.101:8848
             namespace: uat
-            data-id: ${spring.application.name}-degrade-rules
+            username: nacos
+            password: nacos
+            data-id: sentinel-spring-cloud-nacos-demo-degrade-rules
             group-id: DEFAULT_GROUP
             data-type: json
             # 可以通过类 com.alibaba.cloud.sentinel.datasource.RuleType 查找到支持的 rule-type
