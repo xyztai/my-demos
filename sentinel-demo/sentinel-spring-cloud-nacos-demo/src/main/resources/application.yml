@@ -3,33 +3,27 @@ spring:
     sentinel:
       transport:
         dashboard: 127.0.0.1:8080
-        clientIp: 127.0.0.1 # 192.168.101.63
+        clientIp: 127.0.0.1 # 192.168.101.63 sentinel-dashboard识别到的机器IP是容器的ip问题解决
         port: 8719  #默认8719，假如被占用了会自动从8719开始依次+1扫描。直至找到未被占用的端口
       datasource:
-        flow_1:
+        flow-rules:
           nacos:
             server-addr: 192.168.56.101:8848
             namespace: uat
-            data-id: sentinel-spring-cloud-nacos-demo-flow-rules
+            data-id: ${spring.application.name}-flow-rules
             group-id: DEFAULT_GROUP
             data-type: json
             # 可以通过类 com.alibaba.cloud.sentinel.datasource.RuleType 查找到支持的 rule-type
             rule-type: flow # flow, degrade, param-flow, system, authority, gw-flow, gw-api-group
-        flow_2:
+        degrade-rules:
           nacos:
             server-addr: 192.168.56.101:8848
             namespace: uat
-            data-id: sentinel-spring-cloud-nacos-demo-flow-rules-1
+            data-id: ${spring.application.name}-degrade-rules
             group-id: DEFAULT_GROUP
             data-type: json
-            rule-type: flow
-        ds2:
-          nacos:
-            server-addr: 192.168.56.101:8848
-            data-id: sentinel-spring-cloud-nacos-demo-2
-            group-id: DEFAULT_GROUP
-            data-type: json
-            rule-type: degrade # system
+            # 可以通过类 com.alibaba.cloud.sentinel.datasource.RuleType 查找到支持的 rule-type
+            rule-type: degrade # flow, degrade, param-flow, system, authority, gw-flow, gw-api-group
 management:
   endpoints:
     web:
