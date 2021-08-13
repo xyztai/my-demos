@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RefreshScope
 public class SpringCloudConfigApp {
+    static {
+        System.setProperty("com.alibaba.nacos.client.naming.tls.enable", "true");
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(SpringCloudConfigApp.class, args);
     }
