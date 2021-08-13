@@ -68,7 +68,7 @@
         <druid.version>1.1.20</druid.version>
         <mysql.ipport>192.168.56.101:3306</mysql.ipport>
         <nacos.ipport>192.168.56.101:8848</nacos.ipport>
-        <nacos.namespace>prod</nacos.namespace>
+        <nacos.namespace>dev</nacos.namespace>
     </properties>
 
     <dependencyManagement>
