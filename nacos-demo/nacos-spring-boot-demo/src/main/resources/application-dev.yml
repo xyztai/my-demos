@@ -3,16 +3,20 @@ nacos:
     server-addr: @nacos.ipport@
     namespace: @nacos.namespace@ #prod
     group: platform_group
-    data-ids: z-a
+    data-ids: z-a.yml, z-b.yml
     type: yaml
-    auto-refresh: true
+    #auto-refresh: true
     bootstrap:
       enable: true
+    username: nacos
+    password: nacos
   discovery:
     server-addr: @nacos.ipport@
     namespace: @nacos.namespace@ #prod
     auto-register: true #自动注册
     register:
       service-name: nacos-reg #这里优先级高于spring.application.name
-      group: platform
+      group-name: platxxx
+    username: nacos
+    password: nacos
 #    group: DEFAULT_GROUP

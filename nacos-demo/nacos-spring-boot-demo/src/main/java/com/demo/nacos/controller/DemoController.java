@@ -20,13 +20,18 @@ public class DemoController {
     @NacosValue(value="${params.animal:human}", autoRefreshed = true)
     private String animal;
 
+    //@NacosValue(value="${params.star:star}", autoRefreshed = true)
+    @NacosValue(value="${params.star:star}")
+    private String star;
+
     @NacosInjected
     private NamingService namingService;
 
     // http://127.0.0.1:18001/getConfig
     @GetMapping(value = "/getConfig")
     public String Hello(){
-        return "nacos-spring-boot-demo: [human] => " + animal;
+        return "nacos-spring-boot-demo: [human] => " + animal
+                + " [star] => " + star;
     }
 
     // http://127.0.0.1:18001/getInstance?serviceName=nacos-reg&groupName=DEFAULT_GROUP
