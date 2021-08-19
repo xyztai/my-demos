@@ -4,7 +4,7 @@ server:
     #context-path: /dubbo-provider
 
 
-dubbo.:
+dubbo:
   application:
     name: dubbo-provider
 
@@ -18,4 +18,4 @@ dubbo.:
       namespace: @nacos.discovery.namespace@
       group: @nacos.discovery.group@
 
-debug: true
+#debug: true
