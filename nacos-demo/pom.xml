@@ -68,7 +68,17 @@
         <druid.version>1.1.20</druid.version>
         <mysql.ipport>192.168.56.101:3306</mysql.ipport>
         <nacos.ipport>192.168.56.101:8848</nacos.ipport>
-        <nacos.namespace>prod</nacos.namespace>
+        <nacos.config.namespace>prod</nacos.config.namespace>
+        <nacos.config.group>C_G</nacos.config.group>
+        <nacos.config.username>nacos</nacos.config.username>
+        <nacos.config.password>Tt@12345</nacos.config.password>
+        <nacos.discovery.namespace>prod</nacos.discovery.namespace>
+        <nacos.discovery.group>D_G</nacos.discovery.group>
+        <nacos.discovery.username>nacos</nacos.discovery.username>
+        <nacos.discovery.password>Tt@12345</nacos.discovery.password>
+        <server.single.port>50000</server.single.port>
+        <server.provider.port>50001</server.provider.port>
+        <server.consumer.port>50002</server.consumer.port>
     </properties>
 
     <dependencyManagement>

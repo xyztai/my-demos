@@ -1,12 +1,21 @@
 server:
-  port: 20001
+  port: @server.provider.port@
   #servlet:
     #context-path: /dubbo-provider
 
-dubbo:
+
+dubbo.:
   application:
     name: dubbo-provider
+
+
   registry:
-    #address: nacos://127.0.0.1:8848
     address: nacos://@nacos.ipport@
+    username: @nacos.discovery.username@
+    password: @nacos.discovery.password@
     #address: zookeeper://127.0.0.1:2181
+    parameters:
+      namespace: @nacos.discovery.namespace@
+      group: @nacos.discovery.group@
+
+debug: true
