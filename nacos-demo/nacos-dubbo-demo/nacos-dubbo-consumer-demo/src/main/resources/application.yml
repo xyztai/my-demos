@@ -1,12 +1,29 @@
 server:
-  port: 10001
+  port: @server.consumer.port@
   #servlet:
     #context-path: /dubbo-consumer
 
 dubbo:
   application:
     name: dubbo-consumer
+  protocol:
+    name: dubbo # 通信协议，支持http等，默认使用dubbo私有协议，NIO异步传输
+    port: -1 # -1 表示端口自增
   registry:
-    #address: nacos://127.0.0.1:8848
-    address: nacos://@nacos.ipport@
+    address: nacos://@nacos.ipport@?username=nacos&password=Tt_12345 # 注册中心的地址
     #address: zookeeper://127.0.0.1:2181
+    parameters:
+      namespace: @nacos.discovery.namespace@ # 指定注册中心的命名空间
+      group: @nacos.discovery.group@ # 注册中心分组
+    use-as-config-center: false # 不将注册中心用于配置中心
+    use-as-metadata-center: false # 不将注册中心用于元数据中心
+    check: false # 启动时不检查注册中心的状态，避免报错
+    register: true # 是否允许注册
+    subscribe: true # 是否允许订阅
+    accepts: dubbo,rest # 注册者允许的协议
+  consumer:
+    check: false # 启动时不检查生产者的状态，防止生产者未启动时启动失败# Dubbo生产环境配置
+  provider:
+    token: true # 服务提供者要求使用随机Token加密，防止消费者绕过注册中心调用
+
+
