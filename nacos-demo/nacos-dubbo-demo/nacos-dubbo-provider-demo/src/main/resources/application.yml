@@ -3,19 +3,21 @@ server:
   #servlet:
     #context-path: /dubbo-provider
 
-
 dubbo:
   application:
     name: dubbo-provider
 
-
   registry:
-    address: nacos://@nacos.ipport@
-    username: @nacos.discovery.username@
-    password: @nacos.discovery.password@
+    address: nacos://@nacos.ipport@?username=nacos&password=Tt_12345
     #address: zookeeper://127.0.0.1:2181
     parameters:
       namespace: @nacos.discovery.namespace@
       group: @nacos.discovery.group@
+    useAsConfigCenter: false
+    register: true
+    subscribe: true
+    accepts: dubbo,rest
+
+
 
 #debug: true
