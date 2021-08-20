@@ -19,6 +19,7 @@
         <module>nacos-spring-boot-demo</module>
         <module>nacos-spring-cloud-demo</module>
         <module>nacos-dubbo-demo</module>
+        <module>nacos-spring-cloud-dubbo-demo</module>
     </modules>
 
     <!-- 使用 aliyun 库 -->
