@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: @nacos.ipport@
+        namespace: @nacos.discovery.namespace@
+        group: @nacos.discovery.group@
+        username: @nacos.discovery.username@
+        password: @nacos.discovery.password@
+
+  application:
+    name: nacos-sping-cloud-p-demo
+
+server:
+  port: @server.provider.port@
+  tomcat:
+    accesslog:
+      maxDays: 1

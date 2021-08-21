@@ -31,10 +31,10 @@ public class SpringCloudComsumerApp {
             this.restTemplate = restTemplate;
         }
 
-        // http://127.0.0.1:13001/test/CHINA
-        @GetMapping(value = "/test/{str}")
+        // http://127.0.0.1:13001/CHINA
+        @GetMapping(value = "/{str}")
         public String test(@PathVariable String str){
-            return restTemplate.getForObject("http://nacos-spring-cloud-provider-demo/echo/" + str, String.class);
+            return restTemplate.getForObject("http://nacos-sping-cloud-p-demo/" + str, String.class);
         }
     }
 }

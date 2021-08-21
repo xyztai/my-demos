@@ -15,8 +15,8 @@ public class SpringCloudProviderApp {
         SpringApplication.run(SpringCloudProviderApp.class, args);
     }
 
-    @GetMapping(value="/echo/{str}")
+    @GetMapping(value="/{str}")
     public String get(@PathVariable String str){
-        return "OK! " + str;
+        return "OK! PathVariable = " + str + " @ " + SpringCloudProviderApp.class;
     }
 }

@@ -1,0 +1,11 @@
+
+spring.cloud.nacos.discovery.server-addr=@nacos.ipport@
+spring.cloud.nacos.discovery.namespace=@nacos.discovery.namespace@
+spring.cloud.nacos.discovery.group=@nacos.discovery.group@
+spring.cloud.nacos.discovery.username=@nacos.discovery.username@
+spring.cloud.nacos.discovery.password=@nacos.discovery.password@
+
+application.name=nacos-sping-cloud-c-demo
+
+server.port=@server.consumer.port@
+server.tomcat.accesslog.maxDays=1
