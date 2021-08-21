@@ -8,7 +8,7 @@ dubbo:
     name: dubbo-provider
 
   registry:
-    address: nacos://@nacos.ipport@?username=nacos&password=Tt_12345
+    address: nacos://@nacos.ipport@?username=@nacos.config.username@&password=@nacos.config.password@
     #address: zookeeper://127.0.0.1:2181
     parameters:
       namespace: @nacos.discovery.namespace@

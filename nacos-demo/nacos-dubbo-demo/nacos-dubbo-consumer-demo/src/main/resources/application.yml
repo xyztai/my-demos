@@ -10,7 +10,7 @@ dubbo:
     name: dubbo # 通信协议，支持http等，默认使用dubbo私有协议，NIO异步传输
     port: -1 # -1 表示端口自增
   registry:
-    address: nacos://@nacos.ipport@?username=nacos&password=Tt_12345 # 注册中心的地址
+    address: nacos://@nacos.ipport@?username=@nacos.config.username@&password=@nacos.config.password@ # 注册中心的地址
     #address: zookeeper://127.0.0.1:2181
     parameters:
       namespace: @nacos.discovery.namespace@ # 指定注册中心的命名空间
