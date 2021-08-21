@@ -1,13 +1,13 @@
-spring.cloud.nacos.config.server-addr=192.168.56.101:8848
-spring.cloud.nacos.config.namespace=@nacos.namespace@
-spring.cloud.nacos.config.username=nacos
-spring.cloud.nacos.config.password=Tt@12345
+spring.cloud.nacos.config.server-addr=@nacos.ipport@
+spring.cloud.nacos.config.namespace=@nacos.config.namespace@
+spring.cloud.nacos.config.username=@nacos.config.username@
+spring.cloud.nacos.config.password=@nacos.config.password@
 #spring.cloud.nacos.config.access-key=nacos
 #spring.cloud.nacos.config.secret-key=$2a$10$XiI9CAZ6x9uWONNZBIBz6OYNxqZTwmVATkbrKSY.2wD4CugrqTrb6
 spring.cloud.nacos.config.prefix=nacos-x
 spring.cloud.nacos.config.file-extension=yaml
-spring.cloud.nacos.config.group=myGroup
+spring.cloud.nacos.config.group=@nacos.config.group@
 
 spring.application.name=nacos-spring-cloud-config-demo
-server.port=11001
+server.port=@server.single.port@
 #spring.cloud.nacos.config.file-extension=properties

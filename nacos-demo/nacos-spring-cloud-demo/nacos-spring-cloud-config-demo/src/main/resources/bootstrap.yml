@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: @nacos.ipport@
+        namespace: @nacos.config.namespace@
+        username: @nacos.config.username@
+        password: @nacos.config.password@
+        #access-key=nacos
+        #secret-key=$2a$10$XiI9CAZ6x9uWONNZBIBz6OYNxqZTwmVATkbrKSY.2wD4CugrqTrb6
+        prefix: nacos-x
+        file-extension: yaml #properties
+        group: @nacos.config.group@
+
+  application:
+    name: nacos-spring-cloud-config-demo
+
+server:
+  port: @server.consumer.port@

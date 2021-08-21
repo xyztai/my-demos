@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -23,8 +24,8 @@ public class SpringCloudConfigApp {
     private String animal;
 
     // http://127.0.0.1:11001/getConfig
-    @GetMapping("/getConfig")
-    public String get(){
-        return "SpringCloudConfigApp: [human] => " + animal;
+    @GetMapping("/{str}")
+    public String get(@PathVariable String str){
+        return "SpringCloudConfigApp: [human] => " + animal + " PathVariable = " + str;
     }
 }
