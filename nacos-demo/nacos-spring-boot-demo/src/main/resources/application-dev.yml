@@ -1,22 +1,30 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: @server.single.port@
+
 nacos:
   config:
     server-addr: @nacos.ipport@
-    namespace: prod
-    group: platform_group
-    data-ids: z-a.yml, z-b.yml
+    namespace: @nacos.config.namespace@
+    group: @nacos.config.group@
+    data-ids: z-a, z-b
     type: yaml
-    #auto-refresh: true
+    auto-refresh: true
     bootstrap:
       enable: true
-    username: onebp
-    password: Tt@12345
+    username: @nacos.config.username@
+    password: @nacos.config.password@
   discovery:
     server-addr: @nacos.ipport@
-    namespace: prod
+    namespace: @nacos.discovery.namespace@
     auto-register: true #自动注册
     register:
       service-name: nacos-reg #这里优先级高于spring.application.name
-      group-name: platxxx
-    username: onebp
-    password: Tt@12345
-#    group: DEFAULT_GROUP
+      group-name: @nacos.discovery.group@
+    username: @nacos.discovery.username@
+    password: @nacos.discovery.password@
+
+
+
+

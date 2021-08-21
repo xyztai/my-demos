@@ -1,7 +1,4 @@
-server:
-  tomcat:
-    uri-encoding: UTF-8
-  port: 18001
+
 spring:
   profiles:
     active: dev
