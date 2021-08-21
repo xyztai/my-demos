@@ -72,7 +72,7 @@
         <nacos.config.namespace>prod</nacos.config.namespace>
         <nacos.config.group>NACOS_GROUP_CONFIG</nacos.config.group>
         <nacos.config.username>nacos</nacos.config.username>
-        <nacos.config.password>Tt@12345</nacos.config.password>
+        <nacos.config.password>Tt_12345</nacos.config.password>
         <nacos.discovery.namespace>prod</nacos.discovery.namespace>
         <nacos.discovery.group>NACOS_GROUP_DISCOVERY</nacos.discovery.group>
         <nacos.discovery.username>nacos</nacos.discovery.username>
