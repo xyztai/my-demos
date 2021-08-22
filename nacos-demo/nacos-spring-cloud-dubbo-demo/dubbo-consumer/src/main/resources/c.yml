@@ -1,0 +1,23 @@
+server:
+  port: 50002
+dubbo:
+  cloud:
+    subscribed-services: "*"
+    id: dubbo-spring-cloud-consumer
+    name: dubbo-spring-cloud-consumer
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://192.168.56.102
+spring:
+  application:
+    name: dubbo-spring-cloud-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.56.102:8848
+        namespace: prod
+        group: NACOS_GROUP_DISCOVERY
+        username: nacos
+        password: Tt_12345

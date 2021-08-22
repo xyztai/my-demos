@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: c
+  cloud:
+    nacos:
+      config:
+        server-addr: @nacos.ipport@
+        namespace: @nacos.config.namespace@
+        group: @nacos.config.group@
+        username: @nacos.discovery.username@
+        password: @nacos.discovery.password@
+        refresh-enabled: true
+        file-extension: yaml

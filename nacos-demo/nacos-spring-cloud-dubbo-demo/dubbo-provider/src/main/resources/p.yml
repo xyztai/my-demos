@@ -1,0 +1,26 @@
+server:
+  port: 50001
+dubbo:
+  cloud:
+    id: dubbo-spring-cloud-provider
+    name: dubbo-spring-cloud-provider
+    subscribed-services: "*"
+  scan:
+    base-packages: com.demo.nacos.nscdp.service
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: spring-cloud://192.168.56.102
+spring:
+  application:
+    name: spring-cloud-dubbo-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.56.102:8848
+        namespace: prod
+        group: NACOS_GROUP_DISCOVERY
+        username: nacos
+        password: Tt_12345
+
