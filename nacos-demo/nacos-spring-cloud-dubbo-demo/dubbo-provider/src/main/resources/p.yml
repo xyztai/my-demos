@@ -9,12 +9,12 @@ dubbo:
     base-packages: com.demo.nacos.nscdp.service
   protocol:
     name: dubbo
-    port: 20880
+    port: -1
   registry:
-    address: spring-cloud://192.168.56.102
+    address: spring-cloud://localhost
 spring:
   application:
-    name: spring-cloud-dubbo-provider
+    name: p
   cloud:
     nacos:
       discovery:
