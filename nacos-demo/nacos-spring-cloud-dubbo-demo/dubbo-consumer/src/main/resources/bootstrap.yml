@@ -1,6 +1,6 @@
 spring:
   application:
-    name: c
+    name: cx
   cloud:
     nacos:
       config:
@@ -11,3 +11,21 @@ spring:
         password: @nacos.discovery.password@
         refresh-enabled: true
         file-extension: yaml
+      discovery:
+        server-addr: 192.168.56.102:8848
+        namespace: prod
+        group: NACOS_GROUP_DISCOVERY
+        username: nacos
+        password: Tt_12345
+
+server:
+  port: 50002
+dubbo:
+  cloud:
+    subscribed-services: "*"
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost
+
