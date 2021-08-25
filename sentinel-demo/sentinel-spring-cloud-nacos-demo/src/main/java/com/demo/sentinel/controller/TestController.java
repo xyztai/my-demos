@@ -18,7 +18,7 @@ public class TestController {
     @Autowired
     private TestService service;
 
-    @NacosValue(value = "${params.human:human}", autoRefreshed = true)
+    @NacosValue(value="${params.animal:human}", autoRefreshed = true)
     private String human;
 
     @GetMapping(value = "/block")

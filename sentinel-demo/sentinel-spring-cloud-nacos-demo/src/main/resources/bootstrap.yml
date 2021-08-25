@@ -14,6 +14,7 @@ spring:
         username: nacos
         password: Tt_12345
         file-extension: yaml
+        prefix: sentinel-spring-cloud-nacos-demo
     sentinel:
       datasource:
         ds0:
@@ -25,5 +26,12 @@ spring:
         port: 8270
         dashboard: 127.0.0.1:8080
         clientIp: 192.168.100.159
-
-
+  zipkin:
+    service:
+      name: spring-cloud-z
+    sender:
+      type: web
+    base-url: 127.0.0.1:9411
+  sleuth:
+    sampler:
+      rate: 1
