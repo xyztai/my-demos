@@ -8,9 +8,22 @@ spring:
       discovery:
         server-addr: 192.168.56.102:8848
         username: nacos
-        password: nacos
+        password: Tt_12345
       config:
         server-addr: 192.168.56.102:8848
         username: nacos
-        password: nacos
+        password: Tt_12345
         file-extension: yaml
+    sentinel:
+      datasource:
+        ds0:
+          nacos:
+            server-addr: 192.168.56.102:8848
+            dataId: sentinel-flow
+            ruleType: flow
+      transport:
+        port: 8270
+        dashboard: 127.0.0.1:8080
+        clientIp: 192.168.100.159
+
+

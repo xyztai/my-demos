@@ -1,0 +1,29 @@
+[
+  {
+    "resource": "/demo/{name}",
+    "limitApp": "default",
+    "grade": 1,
+    "count": 1,
+    "strategy": 0,
+    "controlBehavior": 0,
+    "clusterMode": false
+  },
+  {
+    "resource": "sayHello",
+    "limitApp": "default",
+    "grade": 1,
+    "count": 1,
+    "strategy": 0,
+    "controlBehavior": 0,
+    "clusterMode": false
+  },
+  {
+    "resource": "/block",
+    "limitApp": "default",
+    "grade": 1,
+    "count": 1,
+    "strategy": 0,
+    "controlBehavior": 0,
+    "clusterMode": false
+  }
+]

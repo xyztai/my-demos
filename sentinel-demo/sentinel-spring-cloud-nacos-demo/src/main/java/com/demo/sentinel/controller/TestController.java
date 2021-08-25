@@ -1,6 +1,7 @@
 package com.demo.sentinel.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.demo.sentinel.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +18,9 @@ public class TestController {
     @Autowired
     private TestService service;
 
+    @NacosValue(value = "${params.human:human}", autoRefreshed = true)
+    private String human;
+
     @GetMapping(value = "/block")
     public String sayBlock() {
         return "Hello, CHINA";
@@ -25,7 +29,7 @@ public class TestController {
 
     @GetMapping(value = "/demo/{name}")
     public String demo(@PathVariable String name) {
-        return "demo, " + name;
+        return "demo, " + name + " [human] => " + human;
     }
 
 
