@@ -14,6 +14,6 @@ public class ThirdPartService {
     private IProviderService providerService;
 
     public String getEcho(String name){
-        return "providerService " + providerService.echo(name);
+        return "providerService: " + providerService.echo(name);
     }
 }
