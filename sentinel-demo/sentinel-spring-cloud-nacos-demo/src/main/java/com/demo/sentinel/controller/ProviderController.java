@@ -1,7 +1,6 @@
 package com.demo.sentinel.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
-import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.demo.sentinel.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RefreshScope
-public class TestController {
+public class ProviderController {
 
     @Autowired
     private TestService service;
@@ -45,5 +44,10 @@ public class TestController {
     @SentinelResource(value = "test.hello", fallback = "helloError")
     public String hello(String name){
         return "hello,"+name;
+    }
+
+    @GetMapping(value = "/provider/{name}")
+    public String provider(@PathVariable String name) {
+        return "from provider: " + name;
     }
 }

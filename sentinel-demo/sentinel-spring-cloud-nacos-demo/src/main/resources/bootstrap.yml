@@ -1,8 +1,8 @@
 server:
-  port: 50001
+  port: 50002
 spring:
   application:
-    name: sentinel-spring-cloud-nacos-demo
+    name: spring-cloud-demo-c
   cloud:
     nacos:
       discovery:
@@ -28,11 +28,25 @@ spring:
         #clientIp: 192.168.100.159
   zipkin:
     service:
-      name: spring-cloud-z
+      name: ${spring.application.name}
     sender:
       type: web
     base-url: http://127.0.0.1:9411
   sleuth:
     sampler:
       rate: 1
+
+#### feign
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 20000
+        readTimeout: 20000
+  httpclient:
+    connection-timeout: 20000
+    connection-timer-repeat: 20000
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50
 
