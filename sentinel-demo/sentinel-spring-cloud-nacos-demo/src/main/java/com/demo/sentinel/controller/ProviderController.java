@@ -1,7 +1,7 @@
 package com.demo.sentinel.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
-import com.demo.sentinel.service.TestService;
+import com.demo.sentinel.service.SentinelResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProviderController {
 
     @Autowired
-    private TestService service;
+    private SentinelResourceService service;
 
     @Value("${params.animal:human}")
     private String animal;

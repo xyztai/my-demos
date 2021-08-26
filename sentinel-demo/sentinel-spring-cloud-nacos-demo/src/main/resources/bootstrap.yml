@@ -1,8 +1,8 @@
 server:
-  port: 50002
+  port: 50001
 spring:
   application:
-    name: spring-cloud-demo-c
+    name: spring-cloud-demo-p
   cloud:
     nacos:
       discovery:

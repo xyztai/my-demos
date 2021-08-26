@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
  * @create 2021-08-06 17:01
  */
 @Service
-public class TestService {
+public class SentinelResourceService {
 
     @SentinelResource(value = "sayHello")
     public String sayHello(String name) {
