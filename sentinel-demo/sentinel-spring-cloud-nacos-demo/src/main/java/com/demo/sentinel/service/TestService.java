@@ -12,6 +12,11 @@ public class TestService {
 
     @SentinelResource(value = "sayHello")
     public String sayHello(String name) {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "sayHello, " + name;
     }
 }

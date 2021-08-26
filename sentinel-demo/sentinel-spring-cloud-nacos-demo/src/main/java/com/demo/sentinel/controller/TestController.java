@@ -33,7 +33,7 @@ public class TestController {
     }
 
 
-    @GetMapping(value = "/hello/{name}")
+    @GetMapping(value = "/{name}")
     public String apiHello(@PathVariable String name) {
         return service.sayHello(name);
     }
