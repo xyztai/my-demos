@@ -50,3 +50,6 @@ feign:
     max-connections: 200
     max-connections-per-route: 50
 
+logging:
+  level:
+    com.alibaba.nacos.client.config.impl: WARN
