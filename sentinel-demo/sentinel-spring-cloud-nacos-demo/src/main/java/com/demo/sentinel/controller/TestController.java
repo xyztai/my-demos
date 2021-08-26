@@ -4,6 +4,8 @@ import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.demo.sentinel.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,13 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
  * @create 2021-08-06 17:02
  */
 @RestController
+@RefreshScope
 public class TestController {
 
     @Autowired
     private TestService service;
 
-    @NacosValue(value="${params.animal:human}", autoRefreshed = true)
-    private String human;
+    @Value("${params.animal:human}")
+    private String animal;
 
     @GetMapping(value = "/block")
     public String sayBlock() {
@@ -29,7 +32,7 @@ public class TestController {
 
     @GetMapping(value = "/demo/{name}")
     public String demo(@PathVariable String name) {
-        return "demo, " + name + " [human] => " + human;
+        return "demo, " + name + " [human] => " + animal;
     }
 
 
