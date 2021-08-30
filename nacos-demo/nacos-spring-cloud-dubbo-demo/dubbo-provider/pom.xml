@@ -23,8 +23,20 @@
         </dependency>
 
         <dependency>
+            <artifactId>nacos-client</artifactId>
+            <groupId>com.alibaba.nacos</groupId>
+            <version>2.0.2</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>nacos-client</artifactId>
+                    <groupId>com.alibaba.nacos</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -34,6 +46,10 @@
                 <exclusion>
                     <artifactId>jsr305</artifactId>
                     <groupId>com.google.code.findbugs</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>nacos-client</artifactId>
+                    <groupId>com.alibaba.nacos</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -50,6 +66,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.demo.nacos.nscdp.DubboProviderApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
