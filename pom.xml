@@ -14,6 +14,7 @@
         <module>jdk-demo</module>
         <module>middle-ware-parent</module>
         <module>sentinel-demo</module>
+        <module>gateway-demo</module>
     </modules>
 
     <!--
