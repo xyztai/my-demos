@@ -6,6 +6,10 @@ package net.t.thread;
  */
 public class JoinDemo {
     public static void main(String[] args) throws InterruptedException {
+
+        System.out.println(System.currentTimeMillis());
+
+
         Runnable r1 = () -> {
             try {
                 Thread.sleep(5000000);
