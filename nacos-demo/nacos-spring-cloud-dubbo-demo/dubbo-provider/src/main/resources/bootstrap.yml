@@ -19,8 +19,8 @@ spring:
 #        username: nacos
 #        password: Tt_12345
 #
-#server:
-#  port: 50001
+server:
+  port: 50001
 #dubbo:
 #  cloud:
 #    subscribed-services: "*"

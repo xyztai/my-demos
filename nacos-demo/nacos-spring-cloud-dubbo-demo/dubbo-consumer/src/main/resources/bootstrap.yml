@@ -18,8 +18,8 @@ spring:
 #        username: nacos
 #        password: Tt_12345
 #
-#server:
-#  port: 50002
+server:
+  port: 50002
 #dubbo:
 #  cloud:
 #    subscribed-services: "*"
@@ -28,4 +28,6 @@ spring:
 #    port: -1
 #  registry:
 #    address: spring-cloud://localhost
-
+dubbo:
+  consumer:
+    check: false
