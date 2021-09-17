@@ -15,6 +15,7 @@
         <module>middle-ware-parent</module>
         <module>sentinel-demo</module>
         <module>gateway-demo</module>
+        <module>others</module>
     </modules>
 
     <!--

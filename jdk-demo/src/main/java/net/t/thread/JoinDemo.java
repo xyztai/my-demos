@@ -1,11 +1,15 @@
 package net.t.thread;
 
+import java.util.UUID;
+
 /**
  * @Author tai
  * @create 2021-08-03 13:16
  */
 public class JoinDemo {
     public static void main(String[] args) throws InterruptedException {
+
+        System.out.println(UUID.randomUUID().toString());
 
         System.out.println(System.currentTimeMillis());
 
