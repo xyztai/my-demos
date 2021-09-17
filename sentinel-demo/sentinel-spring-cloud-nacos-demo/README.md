@@ -45,3 +45,5 @@
 |controlBehavior|流量控制效果（0-快速失败，1-warm up，2-排队等待）|
 |clusterMode|是否为集群模式|
 #### 5. 可以先在sentinel-dashboard上，手工新增一些配置，然后通过接口 http://127.0.0.1:8720/getRules?type=flow 就可以看到流控下的配置如何写，这样子就可以很方便地写到配置文件里面去；
+#### 6. 启动zipkin
+# java -DSTORAGE_TYPE=mysql -DMYSQL_HOST=192.168.56.101 -DMYSQL_DB=zipkin -DMYSQL_USER=root -DMYSQL_PASS=root -jar zipkin.jar
